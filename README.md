@@ -8,9 +8,9 @@ the target IP addresses can be hijacked or MITMed (other attacks against routing
 
 CAA records[1] can be used to limit the CAs, which can issue certificates for a domain. 
 This alone helps with the DV issue, as a BGP hijacker has to target a specific provider instead of any DV provider. 
-Moreover, the specification allows to bind to an account-uri, which means that renewal requests can be made only with some specific account credentials. These constraints force the attacker to either attack the DNSSEC enabled nameserver and its keys, or the server that has the DV account credentials.  
+Perhaps more importantly, the specification allows to bind renewals to an account-uri, which means that renewal requests can be made only with specific account credentials. These constraints force the attacker to either attack the DNSSEC enabled nameserver and its keys, or the server that has the DV account credentials.  
 
-This tool generates account-uri constrained CAA records from existing certbot renewal configuration. The tool parses the configuration, and outputs a CAA record line, which can be used in up to date versions of BIND. 
+This tool generates account-uri constrained CAA records from existing certbot renewal configuration. The tool parses the configuration, and outputs a CAA record line, which can be used on up to date versions of BIND (possibly NSD and others as well). 
 
 Note 2017-08-20: I haven't tested the tool on an actual nameserver yet, just that it produces correct looking output.   
 
