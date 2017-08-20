@@ -1,9 +1,9 @@
 # botcaa
-CAA records from Certbot config
+Automatically generate CAA records from Certbot config
 
-Domain name validation is subject to attacks on DNS as well as routing attacks such as BGP hijacking. 
-DNSSEC helps to mitigate DNS based attacks, but even if the DNS is secured 
-the target IP addresses can be hijacked or MITMed (other attacks against routing). 
+Certificate enrollment using domain name validation (DV) is subject to attacks on DNS as well as routing attacks such as BGP hijacking. 
+DNSSEC helps to mitigate the DNS based attacks, but even if the DNS is secured 
+the target IP addresses can be hijacked or MITMed (other attacks against routing/forwarding). 
 
 
 CAA records[1] can be used to limit the CAs, which can issue certificates for a domain. 
